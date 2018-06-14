@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<head>
-	<title>My calculator</title>
-</head>
-<body><br>
-<div class="container">
-	<div class="row">
-		<div class = col-4>
-			<form name="calc">
-			<div class="container" style="background: black">
-				<br>
-				<div class="row">
-
-					<div class="col-9">
-						<div class="input-group mb-3">
-						  	<input type="text" class="form-control" placeholder="Expression" aria-label="Expression" aria-describedby="basic-addon1" name="exp">
-						</div>
-					</div>
-					<div class="col-1">
-						<button type="button" class="btn btn-success" onclick="calc.exp.value=''">Clear</button>
-					</div>
-				</div>
-
-				<div class="row">
-				    <div class="col">
-				     	 <button   type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='1'" onclick="calc.exp.value+='1'">1</button>
-				    </div>
-				    <div class="col">
-				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='2'">2</button>
-				    </div>
-				    <div class="col">
-				    	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='3'">3</button>
-				    </div>
-				    <div class="col">
-				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='+'">+</button>
-				    </div>
-				    
-			    </div>
-			<br>
-				<div class="row">
-				    <div class="col">
-				     	 <button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='4'">10765</button>
-				    </div>
-				    <div class="col">
-				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='5'">5</button>
-				    </div>
-				    <div class="col">
-				    	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='6'">6</button>
-				    </div>
-				    <div class="col">
-				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='-'">-</button>
-				    </div>
-				    
-			    </div>
-			<br>
-			    <div class="row">
-				    <div class="col">
-				     	 <button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='7'">7</button>
-				    </div>
-				    <div class="col">
-				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='8'">8</button>
-				    </div>
-				    <div class="col">
-				    	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='9'">9</button>
-				    </div>
-				    <div class="col">
-				    <button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='*'">*</button>
-				    </div>
-				    
-			    </div>
-			<br>
-			    <div class="row">
-				    <div class="col">
-				     	 <button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='0'">0</button>
-				    </div>
-				    <div class="col">
-				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='.'">.</button>
-				    </div>
-				     <div class="col">
-				    	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value=eval(calc.exp.value)">=</button>
-				    </div>
-				    <div class="col">
-				      	<button type="button" class="btn btn-info btn-block" onclick="calc.exp.value+='/'">/</button>
-				    </div>
-				    
-			    </div>
-			<br>
-			</div>
-
-	</form>
-
-		</div>
-
-	</div>
+  
+  <head>
+    <title>Calculator by Arjun K S</title>
+    
+  </head>
+  <style>
+    table{
+    border: 1px solid black;
+    }
+    
+    button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 1px;
+    cursor: pointer;
+    border-radius: 50%;
+    }
+    
+ 	
+    h1 {
+    color: #4CAF50;
+    }
+    table#table1 {
+    width:8%; 
+    margin-left:40%; 
+    margin-right:46%;
+    }
+       .button1 {border-radius: 50%;}
+  </style>
+  <body>
+    
+    
+  	<br><br><br><br><br><br><br>
+      
+    <form name="cal">
 	
-</div>
+	<table id="table1" bgcolor="DimGray ">
+	  
+      	  <tr>
+       	    <td colspan="4"> <h1>CALCULATOR</h1></input> </td>
+       	    
+       	  </tr>
+       	  <tr>
+       	    <td colspan="4"> <input type="text" id="demo" style="font-size: 15pt" placeholder="Enter expressions" name="screen" ></input> </td>
+       	    
+       	  </tr>
+	  
+  	  <tr>
+    	<th> <button type="button" name="AC" onclick="cal.screen.value=''">AC</button> </th>
+    	<th> <button type="button" name="C" id="C" onclick="myFunction()">C</button> </th>
+    	<th> <button type="button" name="%" onclick="cal.screen.value+='%'">%</button> </th>
+    	<th> <button type="button" name="root" onclick="cal.screen.value=(Math.sqrt(eval(cal.screen.value)))">&#8730;</button> </th>
+	  </tr>
+	  <tr>
+	    <th> <button type="button" name="7" onclick="cal.screen.value+='7'">7</button> </th>
+	    <th> <button type="button" name="8" onclick="cal.screen.value+='8'">8</button> </th>
+	    <th> <button type="button" name="9" onclick="cal.screen.value+='9'" >9</button> </th>
+	    <th> <button type="button" name="/" onclick="cal.screen.value+='/'">/</button> </th>
+	  </tr>
+	  <tr>
+	    <th> <button type="button" name="4" onclick="cal.screen.value+='4'">4</button> </th>
+	    <th> <button type="button" name="5" onclick="cal.screen.value+='5'">5</button> </th>
+	    <th> <button type="button" name="6" onclick="cal.screen.value+='6'">6</button> </th>
+	    <th> <button type="button" name="*" onclick="cal.screen.value+='*'">*</button> </th>
+	  </tr>
+	  <tr>
+	    <th> <button type="button" name="1" onclick="cal.screen.value+='1'">1</button> </th>
+	    <th> <button type="button" name="2" onclick="cal.screen.value+='2'">2</button> </th>
+	    <th> <button type="button" name="3" onclick="cal.screen.value+='3'">3</button> </th>
+	    <th> <button type="button" name="-" onclick="cal.screen.value+='-'">-</button> </th>
+	  </tr>
+	  <tr>
+	    <th> <button type="button" name="0" onclick="cal.screen.value+='0'">0</button> </th>
+	    <th> <button type="button" name="." onclick="cal.screen.value+='.'">.</button> </th>
+	    <th> <button type="button" name="=" onclick="cal.screen.value=eval(cal.screen.value)">=</button> </th>
+	    <th> <button type="button" name="+" onclick="cal.screen.value+='+'">+</button> </th>
+	  </tr>
+	  
+	</table> 
 	
-</body>
-</html>>
+    </form>
+  
+
+
+<script>
+function myFunction() {
+
+	if ((cal.screen.value)-Math.floor((cal.screen.value))>0)
+	{}
+	else
+	{
+    cal.screen.value=cal.screen.value=Math.floor((cal.screen.value/10));
+	}
+}
+</script>
+
+  </body>
+  
+</html>
