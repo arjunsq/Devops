@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vaisakhn/calculator.git"
+    "url": "git+https://github.com/arjunsq/Devops.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vaisakhn/calculator/issues"
+    "url": "hhttps://github.com/arjunsq/Devops/issues"
   },
-  "homepage": "https://github.com/vaisakhn/calculator#readme",
+  "homepage": "hhttps://github.com/arjunsq/Devops#readme",
   "dependencies": {
     "express": "^4.16.3"
   }
